@@ -1,0 +1,51 @@
+// TodoList.jsx
+import React, { useState } from 'react';
+
+function TodoList() {
+  // TodoList component code...
+}
+
+export default TodoList;
+
+
+  // const toggleCompleted = (index) => {
+  //   setTasks(
+  //     tasks.map((task, i) =>
+  //       i === index ? (task.startsWith('✔️') ? task.slice(2) : '✔️ ' + task) : task
+  //     )
+  //   );
+  // };
+
+
+  123
+  // TodoList.jsx
+import React, { useState } from 'react';
+import './TodoList.css'; // Import the TodoList.css file
+
+function TodoList() {
+  // TodoList component code...
+
+  return (
+    <div className="todo-list-container">
+      <h2>To-Do List</h2>
+      <input
+        className="todo-input"
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Add a new task..."
+      />
+      <button className="add-button" onClick={addTask}>Add Task</button>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index} className="todo-item">
+            {/* Task content */}
+            <button onClick={() => deleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoList;
